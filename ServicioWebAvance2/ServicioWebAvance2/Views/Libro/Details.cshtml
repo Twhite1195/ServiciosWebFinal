@@ -1,0 +1,82 @@
+﻿@model ServicioWebAvance2.Models.Libro
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Libro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Libro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano_Libro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano_Libro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Descarga_Libros)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Descarga_Libros)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Previsualizacion_Libro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Previsualizacion_Libro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Autor.Nombre_Autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autor.Nombre_Autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Editorial.Nombre_Editorial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Editorial.Nombre_Editorial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero.Nombre_Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero.Nombre_Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma.Nombre_Idioma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma.Nombre_Idioma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Libro }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

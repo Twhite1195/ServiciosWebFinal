@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioWebAvance2", "ServicioWebAvance2\ServicioWebAvance2.csproj", "{C76FA7FB-C897-423F-A62C-B722D2FB7DC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEnd", "FrontEnd\FrontEnd.csproj", "{DEFCCD30-1B01-4A6D-8B4D-6BAD35E11702}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C76FA7FB-C897-423F-A62C-B722D2FB7DC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C76FA7FB-C897-423F-A62C-B722D2FB7DC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C76FA7FB-C897-423F-A62C-B722D2FB7DC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C76FA7FB-C897-423F-A62C-B722D2FB7DC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFCCD30-1B01-4A6D-8B4D-6BAD35E11702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFCCD30-1B01-4A6D-8B4D-6BAD35E11702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFCCD30-1B01-4A6D-8B4D-6BAD35E11702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFCCD30-1B01-4A6D-8B4D-6BAD35E11702}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {207430AA-AA3B-4D2F-9A5F-72DC92736397}
+	EndGlobalSection
+EndGlobal

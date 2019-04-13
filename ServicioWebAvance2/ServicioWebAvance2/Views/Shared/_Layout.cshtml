@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MTFlix", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Seguridad <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Tipo_Usuario", "Index", "Tipo_Usuario")</a></li>
+                            <li><a href="#">@Html.ActionLink("Usuarios", "Index", "Usuarios")</a></li>
+                            @*<li><a href="#">Cambio de contraseña</a></li>*@
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Administracion <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Consecutivo", "Index", "Consecutivo")</a></li>
+                            <li><a href="#">@Html.ActionLink("Almacenamiento", "Index", "Almacenamiento")</a></li>
+                            <li><a href="#">@Html.ActionLink("Pelicula", "Index", "Pelicula")</a></li>
+                            <li><a href="#">@Html.ActionLink("Libro", "Index", "Libro")</a></li>
+                            <li><a href="#">@Html.ActionLink("Musica", "Index", "Musica")</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Consultas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Bitaroca", "Index", "Bitacora")</a></li>
+                            <li><a href="#">Transacciones</a></li>
+                            <li><a href="#">Descargas</a></li>
+                            <li><a href="#">Errores</a></li>
+                        </ul>
+                    </li>                   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <span>  @HttpContext.Current.User.Identity.Name</span>
+                    </li>
+                    <li>  @Html.ActionLink("Cerrar Sesion", "Logout", "LogIn")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        @RenderBody()
+        <hr />
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <footer>
+        <div id="google_translate_element" style="text-align: center"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'de,en,es,it,zh-TW', autoDisplay: false }, 'google_translate_element');
+            }
+
+            (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+            $("#btnLogout").on("click", function () {
+                FB.logout(function (response) {
+                    // Person is now logged out
+                });
+            });
+           
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </footer>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

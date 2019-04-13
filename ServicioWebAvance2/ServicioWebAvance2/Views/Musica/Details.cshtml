@@ -1,0 +1,98 @@
+﻿@model ServicioWebAvance2.Models.Musica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Musica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Musica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Musica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Inerpretacion_Musica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Inerpretacion_Musica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano_Musica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano_Musica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Descarga_Musica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Descarga_Musica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Previsualizacion_Musica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Previsualizacion_Musica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disco.Nombre_Disco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disco.Nombre_Disco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disquera.Nombre_Disquera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disquera.Nombre_Disquera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero.Nombre_Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero.Nombre_Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma.Nombre_Idioma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma.Nombre_Idioma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pai.Nombre_Pais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pai.Nombre_Pais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Musica }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

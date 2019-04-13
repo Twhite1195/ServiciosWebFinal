@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ServicioWebAvance2.Models.Libro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>Libros</h2>
+
+
+    <table class="table">
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID_Libro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Libro)
+        </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_Libro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Libro)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID_Libro }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID_Libro }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID_Libro })
+            </td>
+        </tr>
+        }
+
+    </table>
+
+    <p>
+        @Html.ActionLink("Nuevo Libro", "Create")
+    </p>
+

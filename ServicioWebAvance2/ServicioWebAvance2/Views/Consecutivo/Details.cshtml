@@ -1,0 +1,74 @@
+﻿@model ServicioWebAvance2.Models.Consecutivo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Consecutivo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tiene_Prefijo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tiene_Prefijo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prefijo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prefijo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Posee_Rango)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posee_Rango)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rango_Inicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rango_Inicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rango_Final)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rango_Final)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Consecutivos }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

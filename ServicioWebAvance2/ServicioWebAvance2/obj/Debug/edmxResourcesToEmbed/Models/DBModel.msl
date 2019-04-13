@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ServiciosWebModelStoreContainer" CdmEntityContainer="ServiciosWebEntities">
+    <EntitySetMapping Name="Actors">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Actor">
+        <MappingFragment StoreEntitySet="Actor">
+          <ScalarProperty Name="ID_Actor" ColumnName="ID_Actor" />
+          <ScalarProperty Name="Nombre_Actor" ColumnName="Nombre_Actor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Almacenamientoes">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Almacenamiento">
+        <MappingFragment StoreEntitySet="Almacenamiento">
+          <ScalarProperty Name="ID_Almacenamiento" ColumnName="ID_Almacenamiento" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Path_Almacenamiento" ColumnName="Path_Almacenamiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autors">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Autor">
+        <MappingFragment StoreEntitySet="Autor">
+          <ScalarProperty Name="ID_Autor" ColumnName="ID_Autor" />
+          <ScalarProperty Name="Nombre_Autor" ColumnName="Nombre_Autor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bitacoras">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Bitacora">
+        <MappingFragment StoreEntitySet="Bitacora">
+          <ScalarProperty Name="Cod_Bitacora" ColumnName="Cod_Bitacora" />
+          <ScalarProperty Name="Cod_Usuario" ColumnName="Cod_Usuario" />
+          <ScalarProperty Name="Fecha_Hora" ColumnName="Fecha_Hora" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consecutivos">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Consecutivo">
+        <MappingFragment StoreEntitySet="Consecutivos">
+          <ScalarProperty Name="ID_Consecutivos" ColumnName="ID_Consecutivos" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Tiene_Prefijo" ColumnName="Tiene_Prefijo" />
+          <ScalarProperty Name="Prefijo" ColumnName="Prefijo" />
+          <ScalarProperty Name="Posee_Rango" ColumnName="Posee_Rango" />
+          <ScalarProperty Name="Rango_Inicial" ColumnName="Rango_Inicial" />
+          <ScalarProperty Name="Rango_Final" ColumnName="Rango_Final" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discoes">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Disco">
+        <MappingFragment StoreEntitySet="Disco">
+          <ScalarProperty Name="ID_Disco" ColumnName="ID_Disco" />
+          <ScalarProperty Name="Nombre_Disco" ColumnName="Nombre_Disco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Disqueras">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Disquera">
+        <MappingFragment StoreEntitySet="Disquera">
+          <ScalarProperty Name="ID_Disquera" ColumnName="ID_Disquera" />
+          <ScalarProperty Name="Nombre_Disquera" ColumnName="Nombre_Disquera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Editorials">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Editorial">
+        <MappingFragment StoreEntitySet="Editorial">
+          <ScalarProperty Name="ID_Editorial" ColumnName="ID_Editorial" />
+          <ScalarProperty Name="Nombre_Editorial" ColumnName="Nombre_Editorial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Generoes">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Genero">
+        <MappingFragment StoreEntitySet="Genero">
+          <ScalarProperty Name="ID_Genero" ColumnName="ID_Genero" />
+          <ScalarProperty Name="Nombre_Genero" ColumnName="Nombre_Genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Idiomas">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Idioma">
+        <MappingFragment StoreEntitySet="Idioma">
+          <ScalarProperty Name="ID_Idioma" ColumnName="ID_Idioma" />
+          <ScalarProperty Name="Nombre_Idioma" ColumnName="Nombre_Idioma" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libros">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Libro">
+        <MappingFragment StoreEntitySet="Libros">
+          <ScalarProperty Name="ID_Libro" ColumnName="ID_Libro" />
+          <ScalarProperty Name="Genero_Libro" ColumnName="Genero_Libro" />
+          <ScalarProperty Name="Nombre_Libro" ColumnName="Nombre_Libro" />
+          <ScalarProperty Name="Autor_Libro" ColumnName="Autor_Libro" />
+          <ScalarProperty Name="Idioma_Libro" ColumnName="Idioma_Libro" />
+          <ScalarProperty Name="Editorial_Libro" ColumnName="Editorial_Libro" />
+          <ScalarProperty Name="Ano_Libro" ColumnName="Ano_Libro" />
+          <ScalarProperty Name="Archivo_Descarga_Libros" ColumnName="Archivo_Descarga_Libros" />
+          <ScalarProperty Name="Archivo_Previsualizacion_Libro" ColumnName="Archivo_Previsualizacion_Libro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musicas">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Musica">
+        <MappingFragment StoreEntitySet="Musica">
+          <ScalarProperty Name="ID_Musica" ColumnName="ID_Musica" />
+          <ScalarProperty Name="Genero_Musica" ColumnName="Genero_Musica" />
+          <ScalarProperty Name="Nombre_Musica" ColumnName="Nombre_Musica" />
+          <ScalarProperty Name="Tipo_Inerpretacion_Musica" ColumnName="Tipo_Inerpretacion_Musica" />
+          <ScalarProperty Name="Idioma_Musica" ColumnName="Idioma_Musica" />
+          <ScalarProperty Name="Pais_Musica" ColumnName="Pais_Musica" />
+          <ScalarProperty Name="Disquera_Musica" ColumnName="Disquera_Musica" />
+          <ScalarProperty Name="Disco_Musica" ColumnName="Disco_Musica" />
+          <ScalarProperty Name="Ano_Musica" ColumnName="Ano_Musica" />
+          <ScalarProperty Name="Archivo_Descarga_Musica" ColumnName="Archivo_Descarga_Musica" />
+          <ScalarProperty Name="Archivo_Previsualizacion_Musica" ColumnName="Archivo_Previsualizacion_Musica" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Pai">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="ID_Pais" ColumnName="ID_Pais" />
+          <ScalarProperty Name="Nombre_Pais" ColumnName="Nombre_Pais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Peliculas">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Pelicula">
+        <MappingFragment StoreEntitySet="Pelicula">
+          <ScalarProperty Name="ID_Pelicula" ColumnName="ID_Pelicula" />
+          <ScalarProperty Name="Genero_Pelicula" ColumnName="Genero_Pelicula" />
+          <ScalarProperty Name="Nombre_Pelicula" ColumnName="Nombre_Pelicula" />
+          <ScalarProperty Name="Ano_Pelicula" ColumnName="Ano_Pelicula" />
+          <ScalarProperty Name="Idioma_Pelicula" ColumnName="Idioma_Pelicula" />
+          <ScalarProperty Name="Actor1_Pelicula" ColumnName="Actor1_Pelicula" />
+          <ScalarProperty Name="Actor2_Pelicula" ColumnName="Actor2_Pelicula" />
+          <ScalarProperty Name="Actor3_Pelicula" ColumnName="Actor3_Pelicula" />
+          <ScalarProperty Name="Actor4_Pelicula" ColumnName="Actor4_Pelicula" />
+          <ScalarProperty Name="Archivo_Descarga_Pelicula" ColumnName="Archivo_Descarga_Pelicula" />
+          <ScalarProperty Name="Archivo_Previsualizacion_Pelicula" ColumnName="Archivo_Previsualizacion_Pelicula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Bitacora">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Tipo_Bitacora">
+        <MappingFragment StoreEntitySet="Tipo_Bitacora">
+          <ScalarProperty Name="Cod_Tipo_Bitacora" ColumnName="Cod_Tipo_Bitacora" />
+          <ScalarProperty Name="Tipo_Bitacora1" ColumnName="Tipo_Bitacora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Usuario">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Tipo_Usuario">
+        <MappingFragment StoreEntitySet="Tipo_Usuario">
+          <ScalarProperty Name="Cod_Tipo_Usuario" ColumnName="Cod_Tipo_Usuario" />
+          <ScalarProperty Name="Nombre_Tipo_Usuario" ColumnName="Nombre_Tipo_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="ServiciosWebModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Cod_Usuario" ColumnName="Cod_Usuario" />
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="Pri_Ape_Usuario" ColumnName="Pri_Ape_Usuario" />
+          <ScalarProperty Name="Seg_Ape_Usuario" ColumnName="Seg_Ape_Usuario" />
+          <ScalarProperty Name="Email_Usuario" ColumnName="Email_Usuario" />
+          <ScalarProperty Name="Pass_Usuario" ColumnName="Pass_Usuario" />
+          <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="IngresarUsuario" FunctionName="ServiciosWebModel.Store.IngresarUsuario" />
+    <FunctionImportMapping FunctionImportName="IngresarUsuarioEncrypt" FunctionName="ServiciosWebModel.Store.IngresarUsuarioEncrypt" />
+    <FunctionImportMapping FunctionImportName="InsertLibro" FunctionName="ServiciosWebModel.Store.InsertLibro" />
+    <FunctionImportMapping FunctionImportName="InsertMusica" FunctionName="ServiciosWebModel.Store.InsertMusica" />
+    <FunctionImportMapping FunctionImportName="InsertPelicula" FunctionName="ServiciosWebModel.Store.InsertPelicula" />
+    <FunctionImportMapping FunctionImportName="InsertUser" FunctionName="ServiciosWebModel.Store.InsertUser" />
+    <FunctionImportMapping FunctionImportName="LoginUsuarioDecrypt" FunctionName="ServiciosWebModel.Store.LoginUsuarioDecrypt" />
+  </EntityContainerMapping>
+</Mapping>

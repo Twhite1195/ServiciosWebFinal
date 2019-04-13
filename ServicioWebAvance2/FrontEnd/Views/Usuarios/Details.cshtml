@@ -1,0 +1,66 @@
+﻿@model FrontEnd.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pri_Ape_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pri_Ape_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seg_Ape_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seg_Ape_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pass_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pass_Usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo_Usuario1.Nombre_Tipo_Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo_Usuario1.Nombre_Tipo_Usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Cod_Usuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

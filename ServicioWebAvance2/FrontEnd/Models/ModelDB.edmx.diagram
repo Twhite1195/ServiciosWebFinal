@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="385096578ef241a580c82c0e45fdd797" Name="Diagram1">
+        <EntityTypeShape EntityType="ServiciosWebModel.Actor" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Almacenamiento" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Autor" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Bitacora" Width="1.5" PointX="11" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Consecutivo" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Disco" Width="1.5" PointX="3.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Disquera" Width="1.5" PointX="3.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Editorial" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Genero" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Idioma" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Libro" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Musica" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Pai" Width="1.5" PointX="3.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Pelicula" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.sysdiagram" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Tipo_Bitacora" Width="1.5" PointX="8.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Tipo_Usuario" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosWebModel.Usuario" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Actor1__78D3EB5B" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Actor2__79C80F94" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Actor3__7ABC33CD" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Actor4__7BB05806" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Libros__Autor_Li__00750D23" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Bitacora__Tipo__1387E197" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Musica__Disco_Mu__278EDA44" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Musica__Disquera__269AB60B" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Libros__Editoria__025D5595" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Libros__Genero_L__7F80E8EA" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Musica__Genero_M__23BE4960" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Genero__76EBA2E9" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Libros__Idioma_L__0169315C" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Musica__Idioma_M__24B26D99" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Pelicula__Idioma__77DFC722" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Musica__Pais_Mus__25A691D2" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosWebModel.FK__Usuarios__Tipo_U__1A34DF26" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<FrontEnd.Models.Libro>
+@{
+    ViewBag.Title = "Search";
+}
+<h2>Libros</h2>
+<br><br />
+@using (Html.BeginForm("Search", "Libros", FormMethod.Get))
+{
+    @Html.TextBox("Searching")<input type="submit" value="search" />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_Libro)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ano_Libro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Archivo_Descarga_Libros)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Archivo_Previsualizacion_Libro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Autor.Nombre_Autor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Editorial.Nombre_Editorial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genero.Nombre_Genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idioma.Nombre_Idioma)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre_Libro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano_Libro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archivo_Descarga_Libros)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Archivo_Previsualizacion_Libro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autor.Nombre_Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Editorial.Nombre_Editorial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genero.Nombre_Genero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idioma.Nombre_Idioma)
+            </td>
+            @*<td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ID_Libro }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID_Libro }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID_Libro })
+                </td>*@
+        </tr>
+    }
+
+</table>
+

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("MTFLIX", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Lista de Peliculas", "Index", "Peliculas")</li>
+                    <li>@Html.ActionLink("Lista de Musica", "Index", "Musica")</li>
+                    <li>@Html.ActionLink("Lista de Libros", "Index", "Libros")</li>
+
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Busqueda por Categoria <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">@Html.ActionLink("Busqueda de Libros", "Search", "Libros")</a></li>
+                            <li><a href="#">@Html.ActionLink("Busqueda de Musica", "Search", "Musica")</a></li>
+                            <li><a href="#">@Html.ActionLink("Busqueda de Peliculas", "Search", "Peliculas")</a></li>
+                       
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">Bienvenido: @HttpContext.Current.User.Identity.Name</a>
+
+                    </li>
+                    <li>
+                        <a id="btnLogout href="#">Cerrar sesion</a>
+                     
+                    </li>
+                    <li>
+                        @Html.ActionLink("Cerrar Sesion", "Logout", "LogIn")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '873667936305598',
+                cookie: true,  // enable cookies to allow the server to access
+                // the session
+                xfbml: true,  // parse social plugins on this page
+                version: 'v3.2' // The Graph API version to use for the call
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        // Here we run a very simple test of the Graph API after login is
+        // successful.  See statusChangeCallback() for when this call is made.
+        function testAPI() {
+            console.log('Welcome!  Fetching your information.... ');
+            FB.api('/me', function (response) {
+                console.log('Successful login for: ' + response.name);                
+            });
+        }
+
+        function statusChangeCallback(response) {
+            console.log('statusChangeCallback');
+            console.log(response);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else {
+                // The person is not logged into your app or we are unable to tell.
+
+            }
+        }
+
+        // This function is called when someone finishes with the Login
+        // Button.  See the onlogin handler attached to it in the sample
+        // code below.
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        $("#btnLogout").on("click", function () {
+            FB.getLoginStatus(function (response) {
+                console.log(response);
+                if (response.status === 'connected') {
+                    FB.logout(function (response) {
+                        console.log(response);
+                        //$.post("@Url.Action("Logout", "LogIn")");
+
+                        $.ajax({
+                        contentType: "application/json; charset=utf-8",
+                        type: "POST",
+                        url: "@Url.Action("Logout", "Login")"
+                    });
+                    });
+                }
+            });
+        });
+
+    </script>
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

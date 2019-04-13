@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiciosWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Actor">
+    <Key>
+      <PropertyRef Name="ID_Actor" />
+    </Key>
+    <Property Name="ID_Actor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Actor" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Almacenamiento">
+    <Key>
+      <PropertyRef Name="ID_Almacenamiento" />
+    </Key>
+    <Property Name="ID_Almacenamiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Path_Almacenamiento" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Autor">
+    <Key>
+      <PropertyRef Name="ID_Autor" />
+    </Key>
+    <Property Name="ID_Autor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Autor" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="Cod_Bitacora" />
+    </Key>
+    <Property Name="Cod_Bitacora" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cod_Usuario" Type="int" Nullable="false" />
+    <Property Name="Fecha_Hora" Type="datetime" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="Consecutivos">
+    <Key>
+      <PropertyRef Name="ID_Consecutivos" />
+    </Key>
+    <Property Name="ID_Consecutivos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+    <Property Name="Valor" Type="int" Nullable="false" />
+    <Property Name="Tiene_Prefijo" Type="bit" />
+    <Property Name="Prefijo" Type="varchar" MaxLength="100" />
+    <Property Name="Posee_Rango" Type="bit" Nullable="false" />
+    <Property Name="Rango_Inicial" Type="int" />
+    <Property Name="Rango_Final" Type="int" />
+  </EntityType>
+  <EntityType Name="Disco">
+    <Key>
+      <PropertyRef Name="ID_Disco" />
+    </Key>
+    <Property Name="ID_Disco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Disco" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Disquera">
+    <Key>
+      <PropertyRef Name="ID_Disquera" />
+    </Key>
+    <Property Name="ID_Disquera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Disquera" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Editorial">
+    <Key>
+      <PropertyRef Name="ID_Editorial" />
+    </Key>
+    <Property Name="ID_Editorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Editorial" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Genero">
+    <Key>
+      <PropertyRef Name="ID_Genero" />
+    </Key>
+    <Property Name="ID_Genero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Genero" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Idioma">
+    <Key>
+      <PropertyRef Name="ID_Idioma" />
+    </Key>
+    <Property Name="ID_Idioma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Idioma" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="ID_Libro" />
+    </Key>
+    <Property Name="ID_Libro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Genero_Libro" Type="int" />
+    <Property Name="Nombre_Libro" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Autor_Libro" Type="int" />
+    <Property Name="Idioma_Libro" Type="int" />
+    <Property Name="Editorial_Libro" Type="int" />
+    <Property Name="Ano_Libro" Type="int" Nullable="false" />
+    <Property Name="Archivo_Descarga_Libros" Type="varchar" MaxLength="100" />
+    <Property Name="Archivo_Previsualizacion_Libro" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Musica">
+    <Key>
+      <PropertyRef Name="ID_Musica" />
+    </Key>
+    <Property Name="ID_Musica" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Genero_Musica" Type="int" />
+    <Property Name="Nombre_Musica" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tipo_Inerpretacion_Musica" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Idioma_Musica" Type="int" />
+    <Property Name="Pais_Musica" Type="int" />
+    <Property Name="Disquera_Musica" Type="int" />
+    <Property Name="Disco_Musica" Type="int" />
+    <Property Name="Ano_Musica" Type="int" Nullable="false" />
+    <Property Name="Archivo_Descarga_Musica" Type="varchar" MaxLength="100" />
+    <Property Name="Archivo_Previsualizacion_Musica" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="ID_Pais" />
+    </Key>
+    <Property Name="ID_Pais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Pais" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pelicula">
+    <Key>
+      <PropertyRef Name="ID_Pelicula" />
+    </Key>
+    <Property Name="ID_Pelicula" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Genero_Pelicula" Type="int" />
+    <Property Name="Nombre_Pelicula" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Ano_Pelicula" Type="int" Nullable="false" />
+    <Property Name="Idioma_Pelicula" Type="int" />
+    <Property Name="Actor1_Pelicula" Type="int" Nullable="false" />
+    <Property Name="Actor2_Pelicula" Type="int" Nullable="false" />
+    <Property Name="Actor3_Pelicula" Type="int" />
+    <Property Name="Actor4_Pelicula" Type="int" />
+    <Property Name="Archivo_Descarga_Pelicula" Type="varchar" MaxLength="100" />
+    <Property Name="Archivo_Previsualizacion_Pelicula" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Tipo_Bitacora">
+    <Key>
+      <PropertyRef Name="Cod_Tipo_Bitacora" />
+    </Key>
+    <Property Name="Cod_Tipo_Bitacora" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo_Bitacora" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Usuario">
+    <Key>
+      <PropertyRef Name="Cod_Tipo_Usuario" />
+    </Key>
+    <Property Name="Cod_Tipo_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Tipo_Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Cod_Usuario" />
+    </Key>
+    <Property Name="Cod_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_Usuario" Type="varchar" MaxLength="100" />
+    <Property Name="Pri_Ape_Usuario" Type="varchar" MaxLength="100" />
+    <Property Name="Seg_Ape_Usuario" Type="varchar" MaxLength="100" />
+    <Property Name="Email_Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Pass_Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Tipo_Usuario" Type="int" />
+  </EntityType>
+  <Association Name="FK__Bitacora__Tipo__7D0E9093">
+    <End Role="Tipo_Bitacora" Type="Self.Tipo_Bitacora" Multiplicity="0..1" />
+    <End Role="Bitacora" Type="Self.Bitacora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Bitacora">
+        <PropertyRef Name="Cod_Tipo_Bitacora" />
+      </Principal>
+      <Dependent Role="Bitacora">
+        <PropertyRef Name="Tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__Autor_Li__4B422AD5">
+    <End Role="Autor" Type="Self.Autor" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autor">
+        <PropertyRef Name="ID_Autor" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Autor_Libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__Editoria__4D2A7347">
+    <End Role="Editorial" Type="Self.Editorial" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Editorial">
+        <PropertyRef Name="ID_Editorial" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Editorial_Libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__Genero_L__4A4E069C">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="ID_Genero" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Genero_Libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Libros__Idioma_L__4C364F0E">
+    <End Role="Idioma" Type="Self.Idioma" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idioma">
+        <PropertyRef Name="ID_Idioma" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Idioma_Libro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Musica__Disco_Mu__6D9742D9">
+    <End Role="Disco" Type="Self.Disco" Multiplicity="0..1" />
+    <End Role="Musica" Type="Self.Musica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disco">
+        <PropertyRef Name="ID_Disco" />
+      </Principal>
+      <Dependent Role="Musica">
+        <PropertyRef Name="Disco_Musica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Musica__Disquera__6CA31EA0">
+    <End Role="Disquera" Type="Self.Disquera" Multiplicity="0..1" />
+    <End Role="Musica" Type="Self.Musica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disquera">
+        <PropertyRef Name="ID_Disquera" />
+      </Principal>
+      <Dependent Role="Musica">
+        <PropertyRef Name="Disquera_Musica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Musica__Genero_M__69C6B1F5">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="0..1" />
+    <End Role="Musica" Type="Self.Musica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="ID_Genero" />
+      </Principal>
+      <Dependent Role="Musica">
+        <PropertyRef Name="Genero_Musica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Musica__Idioma_M__6ABAD62E">
+    <End Role="Idioma" Type="Self.Idioma" Multiplicity="0..1" />
+    <End Role="Musica" Type="Self.Musica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idioma">
+        <PropertyRef Name="ID_Idioma" />
+      </Principal>
+      <Dependent Role="Musica">
+        <PropertyRef Name="Idioma_Musica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Musica__Pais_Mus__6BAEFA67">
+    <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
+    <End Role="Musica" Type="Self.Musica" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="ID_Pais" />
+      </Principal>
+      <Dependent Role="Musica">
+        <PropertyRef Name="Pais_Musica" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Actor1__43A1090D">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ID_Actor" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Actor1_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Actor2__44952D46">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ID_Actor" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Actor2_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Actor3__4589517F">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="0..1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ID_Actor" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Actor3_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Actor4__467D75B8">
+    <End Role="Actor" Type="Self.Actor" Multiplicity="0..1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Actor">
+        <PropertyRef Name="ID_Actor" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Actor4_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Genero__41B8C09B">
+    <End Role="Genero" Type="Self.Genero" Multiplicity="0..1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genero">
+        <PropertyRef Name="ID_Genero" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Genero_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pelicula__Idioma__42ACE4D4">
+    <End Role="Idioma" Type="Self.Idioma" Multiplicity="0..1" />
+    <End Role="Pelicula" Type="Self.Pelicula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idioma">
+        <PropertyRef Name="ID_Idioma" />
+      </Principal>
+      <Dependent Role="Pelicula">
+        <PropertyRef Name="Idioma_Pelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuarios__Tipo_U__7849DB76">
+    <End Role="Tipo_Usuario" Type="Self.Tipo_Usuario" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Usuario">
+        <PropertyRef Name="Cod_Tipo_Usuario" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="Tipo_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="IngresarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="Pass" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="IngresarUsuarioEncrypt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Genero" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Autor" Type="int" Mode="In" />
+    <Parameter Name="Idioma" Type="int" Mode="In" />
+    <Parameter Name="Editorial" Type="int" Mode="In" />
+    <Parameter Name="ano" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertMusica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Genero" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Tipo_Interpretacion" Type="varchar" Mode="In" />
+    <Parameter Name="Idioma" Type="int" Mode="In" />
+    <Parameter Name="Pais" Type="int" Mode="In" />
+    <Parameter Name="Disquera" Type="int" Mode="In" />
+    <Parameter Name="Disco" Type="int" Mode="In" />
+    <Parameter Name="Ano" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertPelicula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Genero" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ano" Type="int" Mode="In" />
+    <Parameter Name="Idioma" Type="int" Mode="In" />
+    <Parameter Name="Actor1" Type="int" Mode="In" />
+    <Parameter Name="Actor2" Type="int" Mode="In" />
+    <Parameter Name="Actor3" Type="int" Mode="In" />
+    <Parameter Name="Actor4" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Pri_Ape" Type="varchar" Mode="In" />
+    <Parameter Name="Seg_Ape" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Pass" Type="varchar" Mode="In" />
+    <Parameter Name="TipoUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="LoginUsuarioDecrypt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar" Mode="In" />
+    <Parameter Name="Result" Type="bit" Mode="InOut" />
+  </Function>
+  <EntityContainer Name="ServiciosWebModelStoreContainer">
+    <EntitySet Name="Actor" EntityType="Self.Actor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Almacenamiento" EntityType="Self.Almacenamiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Autor" EntityType="Self.Autor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bitacora" EntityType="Self.Bitacora" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Consecutivos" EntityType="Self.Consecutivos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Disco" EntityType="Self.Disco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Disquera" EntityType="Self.Disquera" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Editorial" EntityType="Self.Editorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Genero" EntityType="Self.Genero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Idioma" EntityType="Self.Idioma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musica" EntityType="Self.Musica" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pelicula" EntityType="Self.Pelicula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Bitacora" EntityType="Self.Tipo_Bitacora" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_Usuario" EntityType="Self.Tipo_Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Bitacora__Tipo__7D0E9093" Association="Self.FK__Bitacora__Tipo__7D0E9093">
+      <End Role="Tipo_Bitacora" EntitySet="Tipo_Bitacora" />
+      <End Role="Bitacora" EntitySet="Bitacora" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__Autor_Li__4B422AD5" Association="Self.FK__Libros__Autor_Li__4B422AD5">
+      <End Role="Autor" EntitySet="Autor" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__Editoria__4D2A7347" Association="Self.FK__Libros__Editoria__4D2A7347">
+      <End Role="Editorial" EntitySet="Editorial" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__Genero_L__4A4E069C" Association="Self.FK__Libros__Genero_L__4A4E069C">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Libros__Idioma_L__4C364F0E" Association="Self.FK__Libros__Idioma_L__4C364F0E">
+      <End Role="Idioma" EntitySet="Idioma" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Musica__Disco_Mu__6D9742D9" Association="Self.FK__Musica__Disco_Mu__6D9742D9">
+      <End Role="Disco" EntitySet="Disco" />
+      <End Role="Musica" EntitySet="Musica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Musica__Disquera__6CA31EA0" Association="Self.FK__Musica__Disquera__6CA31EA0">
+      <End Role="Disquera" EntitySet="Disquera" />
+      <End Role="Musica" EntitySet="Musica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Musica__Genero_M__69C6B1F5" Association="Self.FK__Musica__Genero_M__69C6B1F5">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Musica" EntitySet="Musica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Musica__Idioma_M__6ABAD62E" Association="Self.FK__Musica__Idioma_M__6ABAD62E">
+      <End Role="Idioma" EntitySet="Idioma" />
+      <End Role="Musica" EntitySet="Musica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Musica__Pais_Mus__6BAEFA67" Association="Self.FK__Musica__Pais_Mus__6BAEFA67">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Musica" EntitySet="Musica" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Actor1__43A1090D" Association="Self.FK__Pelicula__Actor1__43A1090D">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Actor2__44952D46" Association="Self.FK__Pelicula__Actor2__44952D46">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Actor3__4589517F" Association="Self.FK__Pelicula__Actor3__4589517F">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Actor4__467D75B8" Association="Self.FK__Pelicula__Actor4__467D75B8">
+      <End Role="Actor" EntitySet="Actor" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Genero__41B8C09B" Association="Self.FK__Pelicula__Genero__41B8C09B">
+      <End Role="Genero" EntitySet="Genero" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pelicula__Idioma__42ACE4D4" Association="Self.FK__Pelicula__Idioma__42ACE4D4">
+      <End Role="Idioma" EntitySet="Idioma" />
+      <End Role="Pelicula" EntitySet="Pelicula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuarios__Tipo_U__7849DB76" Association="Self.FK__Usuarios__Tipo_U__7849DB76">
+      <End Role="Tipo_Usuario" EntitySet="Tipo_Usuario" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

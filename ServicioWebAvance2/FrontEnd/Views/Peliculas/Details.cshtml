@@ -1,0 +1,98 @@
+﻿@model FrontEnd.Models.Pelicula
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pelicula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre_Pelicula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre_Pelicula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ano_Pelicula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ano_Pelicula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Descarga_Pelicula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Descarga_Pelicula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Archivo_Previsualizacion_Pelicula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Archivo_Previsualizacion_Pelicula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor.Nombre_Actor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor.Nombre_Actor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor1.Nombre_Actor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor1.Nombre_Actor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor2.Nombre_Actor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor2.Nombre_Actor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actor3.Nombre_Actor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actor3.Nombre_Actor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Genero.Nombre_Genero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero.Nombre_Genero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma.Nombre_Idioma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma.Nombre_Idioma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_Pelicula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
